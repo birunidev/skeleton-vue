@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skeleton Loading</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="card" id="root">
+        <div class="card-image" v-bind:class="loading">
+            <img v-if="isLoaded === true" v-bind:src="img" alt="">
+        </div>
+        <div class="card-detail">
+            <h3 class="card-title" v-bind:class="loading">{{title}}</h3>
+            <p class="card-desc" v-bind:class="loading">{{desc}}</p>
+            <a href="#" v-if="isLoaded === true">Read Article</a>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
